@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=MagicSquare
+comment1.params=array
+comment1.target=MagicSquare(int[][])
+comment2.params=
+comment2.target=boolean\ isMagic()
+comment3.params=
+comment3.target=int\ getMagicNum()
+comment4.params=arr
+comment4.target=void\ setMagicSquare(int[][])
+comment5.params=row
+comment5.target=int\ addRow(int)
+comment6.params=diag
+comment6.target=int\ addDiag(int)
+comment7.params=
+comment7.target=int[]\ addRows()
+comment8.params=column
+comment8.target=int\ addcolumn(int)
+comment9.params=
+comment9.target=int[]\ addcolumns()
+numComments=10
