@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Complexity
+comment0.text=\r\n\ \ Represents\ the\ interface\ for\ an\ object\ that\ can\ be\ assigned\ an\r\n\ \ explicit\ complexity.\r\n
+comment1.params=complexity
+comment1.target=void\ setComplexity(int)
+comment2.params=
+comment2.target=int\ getComplexity()
+numComments=3

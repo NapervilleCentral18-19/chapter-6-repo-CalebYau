@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Question
+comment1.params=query\ result
+comment1.target=Question(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ \ Sets\ up\ the\ question\ with\ a\ default\ complexity.\r\n
+comment2.params=level
+comment2.target=void\ setComplexity(int)
+comment2.text=\r\n\ \ Sets\ the\ complexity\ level\ for\ this\ question.\r\n
+comment3.params=
+comment3.target=int\ getComplexity()
+comment3.text=\r\n\ \ Returns\ the\ complexity\ level\ for\ this\ question.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getQuestion()
+comment4.text=\r\n\ \ Returns\ the\ question.\r\n
+comment5.params=
+comment5.target=java.lang.String\ getAnswer()
+comment5.text=\r\n\ \ Returns\ the\ answer\ to\ this\ question.\r\n
+comment6.params=candidateAnswer
+comment6.target=boolean\ answerCorrect(java.lang.String)
+comment6.text=\r\n\ \ Returns\ true\ if\ the\ candidate\ answer\ matches\ the\ answer.\r\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\r\n\ \ Returns\ this\ question\ (and\ its\ answer)\ as\ a\ string.\r\n
+numComments=8
