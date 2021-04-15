@@ -1,115 +1,92 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Purse
 {
     //private ArrayList
-    ArrayList <Coin> change = new ArrayList();
+    private ArrayList<Coin> pocket = new ArrayList<>();
+    private Coin penny = new Coin("Penny",0.01);
+    private Coin nickel = new Coin("Nickel",0.05);
+    private Coin dime = new Coin("Dime",0.10);
+    private Coin quarter = new Coin("Quarter",0.25);
+    private DecimalFormat decForm = new DecimalFormat("$0.00");
     
-    String type;
-    
-    public Purse (){};
-    
-    public Purse (Coin acoin)
+    //Create a purse class/object and populate with at least 5 coins equaling more than a dollar.
+    public Purse ()
     {
-        add(acoin);
+        pocket.add(penny);
+        pocket.add(nickel);
+        pocket.add(dime);
+        pocket.add(quarter);
+        penny.changeAmount(5);
+        nickel.changeAmount(4);
+        dime.changeAmount(3);
+        quarter.changeAmount(2);
     }
     
-    /**
-     * precondition: Coin will be initialized (value and name) correctly
-     * each variable will have a value
-     * postcondition: Puts the Coin into the array list change
-     */
-    public void add (Coin acoin)
+    public int getNumberOfPenny()
     {
-        change.add(acoin);
+        return penny.getAmount();
     }
     
-    public void remove (String coin)
+    public void setNumberOfPenny(int num)
     {
-        for (int i = 0; i < change.size(); i++)
-        {
-            if (change.get(i).getType() == coin)
-            {
-                change.remove(i);
-            }
-        }
+        penny.changeAmount(num);
     }
     
-    /**
-     * Returns the total value of the coins in the array
-     * list change
-     * @return ???
-     */
+    public int getNumberOfNickels()
+    {
+        return nickel.getAmount();
+    }
+    
+    public void setNumberOfNickels(int num)
+    {
+        nickel.changeAmount(num);
+    }
+    
+    public int getNumberOfDimes()
+    {
+        return dime.getAmount();
+    }
+    
+    public void setNumberOfDimes(int num)
+    {
+        dime.changeAmount(num);
+    }
+    
+    public int getNumberOfQuarters()
+    {
+        return quarter.getAmount();
+    }
+    
+    public void setNumberOfQuarters(int num)
+    {
+        quarter.changeAmount(num);
+    }
+    
+    //calculate total
     public double getTotal()
     {
-        int total = 0;
-	    
-	for (Coin coin: change)
-	{
-	    total += coin.getValue();
-	}
-	    
+        double total = 0;
+        
+        total += getNumberOfPenny() * penny.getValue();
+        total += getNumberOfNickels() * nickel.getValue();
+        total += getNumberOfDimes() * dime.getValue();
+        total += getNumberOfQuarters() * quarter.getValue();
+        
         return total;
     }
-        
-    /**
-     * Returns the all objects in the array list as Strings
-     */
+    
+    //display total number of each coin and total amount in purse
     public String toString()
     {
-        return getNumberofPenny() + "Pennies\t.01\n" + getNumberofNickels() + "Nickels\t.05\n" + getNumberofDimes() + "Dimes\t.10\n" + getNumberofQuarters() + "Quarters\t.25\n" + "Total " + getTotal();
-    }
         
-    public int getNumberofDimes()
-    {
-        int number = 0;
-            
-        for (Coin coin: change)
-        {
-            if (coin.getType().equals("D"))
-                number += 1;
-        }
-            
-        return number;
-    }
-    
-    public int getNumberofPenny()
-    {
-        int number = 0;
-            
-        for (Coin coin: change)
-        {
-            if (coin.getType().equals("P"))
-                number += 1;
-        }
-            
-        return number;
-    }
-        
-    public int getNumberofNickels()
-    {
-        int number = 0;
-            
-        for (Coin coin: change)
-        {
-            if (coin.getType().equals("N"))
-                number += 1;
-        }
-            
-        return number;
-    }
-        
-    public int getNumberofQuarters()
-    {
-        int number = 0;
-            
-        for (Coin coin: change)
-        {
-            if (coin.getType().equals("Q"))
-                number += 1;
-        }
-            
-        return number;
+        return "\n" + getNumberOfPenny() + " " + penny.toString() + "\n" 
+        + getNumberOfNickels() + " " + nickel.toString() + "\n" 
+        + getNumberOfDimes() + " " + dime.toString() + "\n"
+        + getNumberOfQuarters() + " " + quarter.toString() + "\n"
+        + "Total " + decForm.format(getTotal());
     }
 }
 //end of purse

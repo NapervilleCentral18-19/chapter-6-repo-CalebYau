@@ -1,14 +1,17 @@
 #BlueJ class context
 comment0.target=Coin
 comment0.text=\r\n\ \ Edit\ class\ to\ fullfill\ Purse\ Requirements\r\n\r\n\ \ Represents\ a\ type\ of\ coin.\r\n
-comment1.params=type
-comment1.target=Coin(java.lang.String)
+comment1.params=type\ value
+comment1.target=Coin(java.lang.String,\ double)
 comment1.text=-----------------------------------------------------------------\r\n\ \ Sets\ up\ the\ coin\ by\ depending\ on\ the\ object.\r\n
 comment2.params=
 comment2.target=double\ getValue()
-comment2.text=\r\n\ \ \ //-----------------------------------------------------------------\r\n\ \ \ //Flips\ the\ coin\ by\ randomly\ choosing\ a\ face\ value.\r\n\ \ \ //\r\n\ \ \ public\ void\ flip\ ()\r\n\ \ \ {\r\n\ \ \ \ \ \ face\ \=\ (int)\ (Math.random()\ *\ 2);\r\n\ \ \ }\r\n\r\n\ \ \ //-----------------------------------------------------------------\r\n\ \ \ //Returns\ true\ if\ the\ current\ face\ of\ the\ coin\ is\ heads.\r\n\ \ \ //@return\ boolean,\ true\ if\ heads\r\n\ \ \ //\r\n\ \ \ public\ boolean\ isHeads\ ()\r\n\ \ \ {\r\n\ \ \ \ \ \ return\ (face\ \=\=\ HEADS);\r\n\ \ \ }\r\n\r\n\ \ \ //-----------------------------------------------------------------\r\n\ \ \ //Returns\ the\ current\ face\ of\ the\ coin\ as\ a\ string.\r\n\ \ \ //@return\ String\r\n\ \ \ //\r\n\ \ \ public\ String\ toString()\r\n\ \ \ {\r\n\ \ \ \ \ \ String\ faceName;\r\n\ \ \ \ \ \ if\ (face\ \=\=\ HEADS)\r\n\ \ \ \ \ \ \ \ \ faceName\ \=\ "Heads";\r\n\ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ \ faceName\ \=\ "Tails";\r\n\r\n\ \ \ \ \ \ return\ faceName;\r\n\ \ \ }\r\n
-comment3.params=amount
-comment3.target=void\ changeValue(int)
-comment4.params=
-comment4.target=java.lang.String\ getType()
-numComments=5
+comment3.params=
+comment3.target=java.lang.String\ getType()
+comment4.params=num
+comment4.target=void\ changeAmount(int)
+comment5.params=
+comment5.target=int\ getAmount()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

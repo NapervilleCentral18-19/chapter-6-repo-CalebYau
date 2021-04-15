@@ -28,7 +28,7 @@ public class Account implements Comparable
    public Account (String owner, int account, double initial, int type)
    {
       name = owner;
-      acctNumber = account;
+      acctNumber = hashCode();
       balance = initial;
       this.type = type;
    }
@@ -157,19 +157,23 @@ public class Account implements Comparable
 	      //-----------------------------------------------------------------
 	public int compareTo (Object o)
 	{
-			Account a = (Account)o;
-
-
-			return 0;
+		Account a = (Account)o;
+		
+		
+		return this.acctNumber - a.acctNumber;
 	}
 
-
+	//added characters together and multiplied it by a prime number in order to get a distinct hash code
 	public int hashCode()
 	{
 		int hash_num = 0;
-		int temp = 0;
-
-
+		
+		for (int i = 0; i < name.length(); i++)
+		hash_num += name.charAt(i);
+		int factor = 17923;
+		hash_num *= factor;
+		
+		
 		return hash_num;
 	}
 
@@ -177,25 +181,5 @@ public class Account implements Comparable
 
 
 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
